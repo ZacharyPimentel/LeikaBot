@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Leika Bot</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet">
+		<script src="./js/tmi.min.js"></script>
+		<script
+  			src="https://code.jquery.com/jquery-3.4.0.min.js"
+  			integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+  			crossorigin="anonymous">
+  	 	</script>
+		
+	<!--<script src="https://d2g2wobxbkulb1.cloudfront.net/0.0.19/tmi.min.js"></script>--> <!--For "production"-->
+	</head>
+	<body>
+		<header>
+			<div class="img-container">
+				<img src="./img/sings.png">
+				<img src="./img/leika_bot_text.png">
+			</div>
+		</header>
+
+		<main>
+			<div id="current-turn-container">
+				<h1>Current Turn:</h1>
+				<h2 id="current-turn-text" class="empty"></h2>
+				<button id="finished-song-btn" type="submit">Finished Song</button>
+			</div>
+			<h1>Singing Queue</h1>
+			<div class="singing_queue">
+				<div class="queue-box">
+					<ol id=queue>
+						<!-- People in queue will be appended here -->
+					</ol>
+				</div>
+
+			</div>
+			<form class="manual-adds">
+				<p>Manual additions</p>
+				<input id="add-player-input" type="text" name="display-name">
+				<input id="add-player-btn" type="submit" value="Add" name=>
+			</form>
+		</main>
+
+		<footer>
+			<div id="circle"></div>
+			<div >
+				<p id="connecting_text">connecting to twitch...</p>
+			</div>
+		</footer>
+
+		<audio  id="sona1" src="./sound/sona1.mp3"></audio>
+		<audio  id="sona2" src="./sound/sona2.mp3"></audio>
+		<audio  id="sona3" src="./sound/sona3.mp3"></audio>
+		<audio  id="sona4" src="./sound/sona4.mp3"></audio>
+
+		<script src="main.js"></script>
+		<script src="js/queue.js"></script>
+	</body>
+</html>
